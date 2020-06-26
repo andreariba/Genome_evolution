@@ -21,6 +21,3 @@ git clone git@github.com:andreariba/Genome_evolution.git
 
 ```
 
-## Authors
-
-* **Andrea Riba** - https://scholar.google.ch/citations?user=aZ9tkZgAAAAJ&hl=en
