@@ -10,7 +10,7 @@ g++ -O4 -o SB_estimation.exe SB_estimation.cpp
 
 ```
 
-## Running
+### Running
 
 Run the simulation for a specific ORF typing the following command
 
