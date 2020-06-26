@@ -9,7 +9,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-g++ compiler is needed. The current version has been tested on GCC v4.8.4 and operating system Debian 6.3.0-18+deb9u1
+g++ compiler is needed. The current version has been tested on GCC v6.3.0 and operating system Debian Linux 9
 
 
 ## Authors
