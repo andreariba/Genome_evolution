@@ -24,7 +24,7 @@ Run the simulation for a specific ORF typing the following command
 
 ### Output
 
-1. ratio number of breaks over lenght
+1. number of breaks over lenght ratio 
 2. distance at which the tail looks like a Stick-Breaking
 3. fraction of segments that follow the Stick-Breaking
 
