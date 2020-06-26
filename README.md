@@ -11,6 +11,15 @@ These instructions will get you a copy of the project up and running on your loc
 
 g++ compiler is needed. The current version has been tested on GCC v6.3.0 and operating system Debian Linux 9
 
+### Installing
+
+Clone the repository:
+
+```
+
+git clone git@github.com:andreariba/Genome_evolution.git
+
+```
 
 ## Authors
 
