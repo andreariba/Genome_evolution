@@ -1,0 +1,39 @@
+
+
+data <- read.table("AluY.dat")
+dataest <- read.table("out.dat")
+i <- which.min(dataest$V4[dataest$V4>0])
+data <- data[data<1000000]
+
+BScum <- function(x,xmin,B,L) {
+	return (1+B*(1-x/L))*exp(-B/L*x)/((1+B*(1-xmin/L))*exp(-B/L*xmin))
+}
+
+percSB <- length(data[data>dataest$V1[i]])/length(data)/BScum(dataest$V1[i],0,dataest$V2[i]*dataest$V3[i],dataest$V3[i])
+
+print(paste("xmin: ",dataest$V1[i]))
+print(paste("b: ",dataest$V2[i]))
+print(paste("l: ",dataest$V3[i]))
+print(paste("D: ",dataest$V4[i]))
+print(paste("perc SB: ",percSB))
+
+svg("Alu.svg")
+
+layout(matrix(c(1,2,3,4), 2, 2, byrow = TRUE))
+
+plot(dataest$V1,dataest$V2,xlab=expression(x[min]),ylab="b")
+points(dataest$V1[i],dataest$V2[i], col="red",lwd=3)
+
+plot(dataest$V1,dataest$V3,xlab=expression(x[min]),ylab="l")
+points(dataest$V1[i],dataest$V3[i], col="red",lwd=3)
+
+plot(dataest$V1,dataest$V4,xlab=expression(x[min]),ylab=expression(D[KS]))
+points(dataest$V1[i],dataest$V4[i], col="red",lwd=3)
+
+#binned <- hist(data$V1,breaks=100,plot=FALSE)
+#plot(binned$mids,binned$density,xlab="distance", ylab="density",log="xy")
+#x <- seq(xmin,max(data),by=1000)
+#lines(x,length(data$V1[data$V1>xmin])/length(data$V1)*(alpha-1)/xmin*(x/xmin)^(-alpha),col="red",lwd=3,lty="dotted")
+#text(10^4,1e-7,paste("p-value =",pnorm(-abs(Zscore))))
+dev.off()
+
