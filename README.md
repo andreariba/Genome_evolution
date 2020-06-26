@@ -1,6 +1,6 @@
 # Genome evolution
 
-Repository containing utilities to analyze distribution of distances, related to genomic objects. 
+The repository contains utilities to analyze distributions of distances, related to genomic objects. 
 Supplementary material related to the following preprint: https://www.biorxiv.org/content/10.1101/819284v1.abstract
 
 ## Getting Started
