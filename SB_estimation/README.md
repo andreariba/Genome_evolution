@@ -14,7 +14,7 @@ g++ -O4 -o SB_estimation.exe SB_estimation.cpp
 
 ### Running
 
-Run the simulation for a specific ORF typing the following command
+Run the simulation for a specific set of distances typing the following command
 
 ```
 
